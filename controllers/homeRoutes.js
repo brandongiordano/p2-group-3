@@ -4,21 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all orders and JOIN with user data
-    const orderData = await Order.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const orders = orderData.map((order) => order.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
+    res.render('home', { 
       orders, 
       logged_in: req.session.logged_in 
     });
@@ -27,6 +13,31 @@ router.get('/', async (req, res) => {
   }
 });
 
+//get all orders
+router.get('/order', async (req, res) => {
+  try {
+    const orderData = await Order.findAll({
+      include: [{ model: Order }],
+    });
+    res.status(200).json(orderData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+//get all users
+router.get('/user', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [{ model: User }],
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+//get order by id
 router.get('/order/:id', async (req, res) => {
   try {
     const orderData = await Order.findByPk(req.params.id, {

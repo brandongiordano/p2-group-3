@@ -26,13 +26,6 @@ Order.init(
         key: 'id',
       },
     },
-    user_address: {
-      type: DataTypes.STRING,
-      references: {
-      model: 'user',
-      key: 'address',
-      },
-    },
   },
   {
     sequelize,
