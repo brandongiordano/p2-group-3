@@ -1,21 +1,42 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-    <div>
-        <h2 class="text-xl text-center py-10">Great to see you again!</h2>
-    </div>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
-    <div class="border-2 border-black rounded mx-96">
-        <!-- Login Container -->
-        <div class="pl-96 pt-16">
-            <h2 class="p-2 text-xl">Username:</h2>
-            <input class="w-96 pl-5 border-black border-2 rounded" type="text" placeholder="Enter your username here">
-        </div>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-        <div class="pl-96 py-16">
-            <h2 class="p-2 text-xl">Password:</h2>
-            <input class="w-96 pl-5 border-black border-2 rounded" type="text" placeholder="Enter your password here">
-        </div>
-
-        <div class="text-center">
-            <button class="bg-black text-white rounded mb-10 p-3">LOGIN</button>
-        </div>
-    </div>
+<script src="./js/login.js"></script>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>PAPAYON</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
     <header class="">
         <!-- Place holder for logo -->
@@ -14,24 +16,26 @@
     </header>
 <body>
     <nav>
-        <div>
-            <h2>PAPAYON</h2>
-            <div>
-                Welcome, name here
-            </div>
-           <li>
-                <a>Home</a>
-                <a>????</a>
-           </li>
-        </div>
-    </nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
 
     <div class="text-center">
         <h2 class="text-2xl">Welcome to Papayon!</h2>
     </div>
-    <div>
-        render necessary handlebar here here
-    </div>
+    <main>
+      {{{ body }}}  
+    </main>
     
+    <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
 </body>
 </html>
