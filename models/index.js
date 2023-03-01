@@ -15,6 +15,6 @@ Order.belongsTo(User, {
 Order.hasMany(Pizza, {
   foreignKey: 'order_id',
   unique: false
-}) 
+});
 
 module.exports = { User, Order, Pizza };

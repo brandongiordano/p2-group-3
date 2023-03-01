@@ -11,8 +11,15 @@ Pizza.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Ingredients: {
-      type: DataTypes.STRING,
+    ingredients: {
+        type: DataTypes.STRING,
+    allowNull: false,
+    get() {
+        return this.getDataValue('favColors').split(';')
+    },
+    set(val) {
+       this.setDataValue('favColors',val.join(';'));
+    },
     },
     order_id: {
         type: DataTypes.INTEGER,
