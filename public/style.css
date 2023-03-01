@@ -1,0 +1,20 @@
+*{
+    font-family: 'Amatic SC', cursive;
+};
+
+
+
+ @media screen and (max-width: 720px) {
+        main,
+        nav,
+        header,
+        .mid-body {
+          flex-direction: column;
+        }
+      }
+
+.mid-body{
+    background-image: url(./images/pizza_bg.jpg);
+    background-size:cover;
+    backdrop-filter: blur(4);
+};
