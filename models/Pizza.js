@@ -11,23 +11,14 @@ Pizza.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    ingredients: {
-        type: DataTypes.STRING,
-    allowNull: false,
-    get() {
-        return this.getDataValue('favColors').split(';')
+    pizza_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    set(val) {
-       this.setDataValue('favColors',val.join(';'));
-    },
-    },
-    order_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'order',
-          key: 'id',
-        },
-      },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    }
   },
   {
     sequelize,

@@ -16,5 +16,12 @@
       "email": "amiko2k20@aol.com",
       "password": "password12345",
       "address": "1874 amiko avenue"
+    },
+    {
+      "name": "Papa Yon",
+      "email": "papaenlacasa@aol.com",
+      "password": "pizza123",
+      "address": "Papa Yon HQ",
+      "admin": true
     }
   ]

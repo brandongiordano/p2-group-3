@@ -39,6 +39,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    admin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    }
   },
   {
     hooks: {

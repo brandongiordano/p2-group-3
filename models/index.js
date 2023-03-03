@@ -2,19 +2,24 @@ const User = require('./User');
 const Order = require('./Order');
 const Pizza = require('./Pizza');
 
-
-User.hasMany(Order, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+Pizza.belongsToMany(User, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Order,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'ordered_pizza'
 });
 
-Order.belongsTo(User, {
-  foreignKey: 'user_id'
-});
-
-Order.hasMany(Pizza, {
-  foreignKey: 'order_id',
-  unique: false
+User.belongsToMany(Pizza, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Order,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'order_history'
 });
 
 module.exports = { User, Order, Pizza };

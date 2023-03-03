@@ -1,46 +1,11 @@
 const router = require('express').Router();
-const { Order, User } = require('../models');
+const { Pizza, User, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', { 
-      // orders, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-//get all orders
-router.get('/order', async (req, res) => {
-  try {
-    const orderData = await Order.findAll({
-      include: [{ model: Order }],
-    });
-    res.status(200).json(orderData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
-
-//get all users
-router.get('/user', async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      include: [{ model: User }],
-    });
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
-
-//get order by id
-router.get('/order/:id', async (req, res) => {
-  try {
-    const orderData = await Order.findByPk(req.params.id, {
+    // Get all pizzas and JOIN with user data
+    const pizzaData = await Pizza.findAll({
       include: [
         {
           model: User,
@@ -49,11 +14,13 @@ router.get('/order/:id', async (req, res) => {
       ],
     });
 
-    const order = orderData.get({ plain: true });
+    // Serialize data so the template can read it
+    const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
 
-    res.render('order', {
-      ...order,
-      logged_in: req.session.logged_in
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      pizzas, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -66,7 +33,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Order }],
+      include: [{ model: Project }],
     });
 
     const user = userData.get({ plain: true });
