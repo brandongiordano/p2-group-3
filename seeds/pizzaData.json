@@ -1,0 +1,30 @@
+[
+    {
+      "pizza_name": "Cheese",
+      "price": "8.99"
+    },
+    {
+        "pizza_name": "Pepperoni",
+        "price": "9.99"
+    },
+    {
+        "pizza_name": "Veggie",
+        "price": "9.99"
+    },
+    {
+        "pizza_name": "Meat Lovers",
+        "price": "10.99"
+    },
+    {
+        "pizza_name": "Bacon Ranch",
+        "price": "10.99"
+    },
+    {
+        "pizza_name": "Hawaiian",
+        "price": "9.99"
+    },
+    {
+        "pizza_name": "Supreme",
+        "price": "10.99"
+    }
+  ]

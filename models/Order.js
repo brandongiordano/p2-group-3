@@ -11,8 +11,9 @@ Order.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    description: {
-      type: DataTypes.STRING,
+    fulfilled: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     date_created: {
       type: DataTypes.DATE,
@@ -26,6 +27,14 @@ Order.init(
         key: 'id',
       },
     },
+    pizza_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'pizza',
+        key: 'id',
+        unique: false
+      },
+    }
   },
   {
     sequelize,
