@@ -22,4 +22,6 @@ User.belongsToMany(Pizza, {
   as: 'order_history'
 });
 
+
+
 module.exports = { User, Order, Pizza };
