@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const pizzas = pizzaData.map((pizza) => pizzas.get({ plain: true }));
+    const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -56,12 +56,31 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-//render /building (no associations yet)
-router.get('/building', (req, res) => 
-{
 
-  res.render('building');
+router.get('/building', async (req, res) => {
+  try {
+    // Get all pizzas and JOIN with user data
+    const pizzaData = await Pizza.findAll();
+
+    // Serialize data so the template can read it
+    const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('building', { 
+      pizzas, 
+      logged_in: req.session.logged_in 
+    });
+    console.log(pizzas)
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+//render /building (no associations yet)
+// router.get('/building', (req, res) => 
+// {
+
+//   res.render('building');
+// });
 
 //render /checkout (no associations yet)
 router.get('/Checkout', (req, res) => 

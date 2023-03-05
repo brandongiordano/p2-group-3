@@ -5,40 +5,25 @@
 
     <div>
         <img src="" alt="">
-        <h2 class="text-4xl rounded-full text-center">PIZZA PLACE PLACER</h2>
+        <h2 class="text-4xl rounded-full text-center">Please Choose your pizza 🍕</h2>
     </div>
 
     <!-- Ingredients -->
-    <div class="m-4 text-center">
-        <div>
-
+<div class="bg-[#f8ffdb]">
+{{#each pizzas as |pizza|}}
+        <div class="bg-[#F8FFDB] flex justify-center p-4 text-2xl m-4 text-center rounded">
+           <div class="bg-[#F8FFDB] w-2/5 input-group">
+  <div class="bg-[#ff6464] input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+  </div>
+  <input value="{{pizza.pizza_name}}         ${{pizza.price}}" type="text" class="bg-green-300 text-3xl form-control" aria-label="Text input with radio button"></input>
+</div>
         </div>
-        <!-- Cheese -->
-        <div class="p-4 text-2xl m-4 text-center">
-            <a>Cheese</a>
-            <a>Cheese</a>
-            <a>Cheese</a>
-            <a>Cheese</a>
-        </div>
-
-       <!-- Sauce -->
-        <div class="p-4 text-2xl m-4 text-center">
-            <a>Sauce</a>
-            <a>Sauce</a>
-            <a>Sauce</a>
-            <a>Sauce</a>
-        </div>
-
-        <!-- Topppings -->
-        <div class="p-4 mb-6 text-center text-2xl">
-            <a>Topping</a>
-            <a>Topping</a>
-            <a>Topping</a>
-            <a>Topping</a>
-        </div>
-         
-    </div>
-        <div class="mt-4 text-center text-3xl">
+        {{/each}}
+   </div>   
+   <a href="/checkout"> 
+        <div class="bg-[#F8FFDB] text-center text-3xl">
             <button class="text-dark hover:bg-green-800 text-2xl rounded bg-[#FF7D7D] mb-10 p-3">Proceed to Checkout</button>
         </div>
+        </a> 
 </div>
