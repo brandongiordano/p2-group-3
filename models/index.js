@@ -16,11 +16,12 @@ User.belongsToMany(Pizza, {
   // Define the third table needed to store the foreign keys
   through: {
     model: Order,
-    unique: false
+    unique: false,
   },
   // Define an alias for when data is retrieved
   as: 'order_history'
 });
+
 
 
 

@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
+    const pizzas = pizzaData.map((pizza) => pizzas.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 

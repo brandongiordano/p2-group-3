@@ -22,7 +22,7 @@
       </header>
 
       <nav class="flex border-8 border-solid border-green-300 bg-[#F8FFDB] p-4">
-        <ul class="flex justify-content-center gap-10">
+        <ul class="text-[#ff7D7D] flex justify-content-center gap-10">
             <li class="mr-6">
               <a class="text-3xl text-[#ff7D7D] hover:text-green-800" href="/">Home   <i class="fa-solid fa-house"></i></a>
             </li>
@@ -31,13 +31,21 @@
             </li>
         {{#if logged_in}}
         <a class="justify-end text-3xl text-[#ff7D7D] hover:text-green-800" href="/profile">profile     <i class="fa-regular fa-user"></i></a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="justify-end text-3xl text-[#ff7D7D] hover:text-green-800" id="logout">logout</button>
         {{else}}
         <a class="justify-end text-3xl text-[#ff7D7D] hover:text-green-800" href="/login">login<i class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a>
         {{/if}}
           </ul>
       </nav>
-
+{{#if logged_in}}
+      <div class="text-center">
+        <h2 class="gap-10 p-4 text-4xl bg-[#F8FFDB] text-[#FF7D7D]">Welcome, {{ name }}!</h2>
+    </div>
+    {{else}}
+        <div class="text-center">
+        <h2 class="gap-10 p-4 text-4xl bg-[#F8FFDB] text-[#FF7D7D]">Welcome to Papayón!</h2>
+    </div>
+    {{/if}}
     <main>
       {{{ body }}}  
     </main>
