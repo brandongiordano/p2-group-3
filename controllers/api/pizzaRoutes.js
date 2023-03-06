@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pizza } = require('../../models/');
+const { Pizza, User } = require('../../models/');
 
 // CREATE a new pizza
 router.post('/', async (req, res) => {

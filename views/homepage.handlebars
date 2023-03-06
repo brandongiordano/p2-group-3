@@ -1,17 +1,20 @@
-
-    <div class="text-center">
-        <h2 class="text-2xl">Welcome to Papayon!</h2>
-    </div>
+<div class="mid-body">
 
     <!-- Button -->
-    <div class="flex justify-center gap-10 p-14">
+    <div class="flex justify-center gap-14 p-20">
+           {{#if logged_in}}
+           <a href="/building">
+            <button class="transition delay-50 duration-200 ease-in-out hover:bg-[#b3ffae] p-20 bg-[#ff6464] rounded">
+            <h3 class="text-3xl">Order Some 'Za</h3>
+        </button>
+        </a>
+              {{else}}
         <!-- Button #1 -->
-        <button class="p-20 bg-indigo-500 rounded">
-            <h3 class="text-xl">Create Account</h3>
+        <a href="/login">
+        <button class="transition delay-50 duration-200 ease-in-out hover:bg-[#b3ffae] p-20 bg-[#ff6464] rounded">
+            <h3 class="text-3xl">Create Account</h3>
         </button>
-
-        <!-- Button #2 -->
-        <button class="p-20 bg-emerald-500 rounded">
-            <a href="/login">login</a>
-        </button>
+        </a>
+        {{/if}}
     </div>
+</div>
