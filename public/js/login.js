@@ -4,7 +4,7 @@ const loginFormHandler = async (event) => {
     // Collect values from the login form
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
-    const loginFail = document.querySelector('#fail');
+    const loginFail = document.querySelector('#loginfail');
     if (email && password) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
@@ -29,6 +29,7 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const address = document.querySelector('#address-signup').value.trim();
+    const signupFail = document.querySelector('#signupfail')
   
     if (name && email && password && address) {
       const response = await fetch('/api/users', {
@@ -40,9 +41,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-
-
-        alert(response.statusText);
+        signupFail.innerHTML = "One or more fields missing";
       }
     }
   };
