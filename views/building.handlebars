@@ -1,44 +1,27 @@
-
-    <div class="text-center p-10">
-        <h2 class="text-2xl">Pizza Order</h2>
+<div class=" text-[#FF7D7D] bg-[#F8FFDB] ">
+    <div class="bg-[#F8FFDB] text-center p-10">
+        <h2 class="p-6 text-6xl text-[#FF7D7D] text-2xl">Your Pizza Order</h2>
     </div>
 
     <div>
         <img src="" alt="">
-        <h2 class="rounded-full text-center">PIZZA PLACE PLACER</h2>
+        <h2 class="text-4xl rounded-full text-center">Please Choose your pizza 🍕</h2>
     </div>
 
     <!-- Ingredients -->
-    <div class="">
-        <div>
-
-        </div>
-        <!-- Cheese -->
-        <div class="">
-            <a>Cheese</a>
-            <a>Cheese</a>
-            <a>Cheese</a>
-            <a>Cheese</a>
-        </div>
-
-       <!-- Sauce -->
-        <div>
-            <a>Sauce</a>
-            <a>Sauce</a>
-            <a>Sauce</a>
-            <a>Sauce</a>
-        </div>
-
-        <!-- Topppings -->
-        <div>
-            <a>Topping</a>
-            <a>Topping</a>
-            <a>Topping</a>
-            <a>Topping</a>
-        </div>
-         
+<div class="bg-[#f8ffdb]">
+{{#each pizzas as |pizza|}}
+<fieldset class="flex justify-center">
+    <div class="m-2 bg-[#F8FFDB]">
+      <input class="" type="radio" id="huey" name="drone" value="huey">
+      <label class="p-3 text-3xl" for="{{pizza.pizza_name}}">{{pizza.pizza_name}}      ${{pizza.price}}</label>
     </div>
-        <div class="text-center">
-            <button class="bg-black text-white rounded mb-10 p-3">Proceed to Checkout</button>
+</fieldset>
+        {{/each}}
+   </div>   
+   <a href="/checkout"> 
+        <div class="pt-4 bg-[#F8FFDB] text-center text-3xl">
+            <button class="text-dark hover:bg-green-800 text-2xl rounded bg-[#FF7D7D] mb-10 p-3">Proceed to Checkout</button>
         </div>
-
+        </a> 
+</div>

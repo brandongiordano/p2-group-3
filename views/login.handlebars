@@ -1,39 +1,45 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<div class="flex text-[#ff6464] row bg-[#F8FFDB]">
+  <div  class=" p-6 col-md-6">
+    <h2 class="text-3xl p-4">Login</h2>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
+    <form class="pl-8 bg-[#b3ffae] shadow-md rounded px-8 pt-6 pb-8 mb-4 w-3/5 form login-form">
+      <div class="pl-4 text-2xl form-group">
+        <label class="pr-5" for="email-login">email:</label>
+        <input class="pr-10 rounded form-input" type="text" id="email-login" />
       </div>
-      <div class="form-group">
+      <div class="p-3 text-2xl form-group">
         <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
+        <input class="pr-10 rounded form-input" type="password" id="password-login" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
+      <h3 class="p-4 text-2xl text-center" id="loginfail"></h3>
+      <div class="flex justify-center form-group">
+        <button class="pt-6 bg-[#FF7D7D] hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">login</button>
       </div>
     </form>
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
+  <div class="p-6 col-md-6">
+    <h2 class="text-3xl p-4">Signup</h2>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+    <form class="bg-[#b3ffae] shadow-md rounded px-8 pt-6 pb-8 mb-4 w-3/5 form signup-form">
+      <div class="pl-4 text-2xl form-group">
+        <label  class="pr-5" for="name-signup">name:</label>
+        <input class="w-3/5 pl-2 py-1 rounded form-input" type="text" id="name-signup" />
       </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+      <div class="py-3 pl-4 text-2xl form-group">
+        <label  class="pr-5" for="email-signup">email:</label>
+        <input class="w-3/5 pl-2 py-1 rounded form-input" type="text" id="email-signup" />
       </div>
-      <div class="form-group">
+      <div class="pb-4 pl-4 text-2xl form-group">
         <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
+        <input class="w-3/5 pl-2 py-1 rounded form-input" type="password" id="password-signup" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+            <div class="pb-4 pl-6 pr-6 text-2xl form-group">
+        <label  for="address-signup">address:</label>
+        <input class="w-3/4 pl-2 py-1 rounded form-input" type="input" id="address-signup" />
+      </div>
+            <h3 class="p-4 text-2xl text-center" id="signupfail"></h3>
+      <div class="flex justify-center text-2xl form-group">
+        <button class="pt-6 bg-[#FF7D7D] hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">signup</button>
       </div>
     </form>
   </div>

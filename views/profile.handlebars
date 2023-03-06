@@ -1,14 +1,23 @@
 
-    <main>
-        <!-- Tabs -->
-        <div>
-            <div>Order History</div>
-            <div>Favorites Pizza Builds</div>
-            <div>Account Info</div>
-        </div>
-    </main>
+    <div class="mb-4 bg-[#F8FFDB] flex justify-center">
+<div class="ml-4 text-[#FF7D7D] p-2 text-2xl w-1/2 h-40 border-8 border-green-300 mr-5">
+  <p class="text-3xl font-bold">Address:</p>
+  <p class="">{{address}}</p>
+</div>
+<div>
+</div>
 
-    <footer>
-        <h2>All Rights Reserved</h2>
-    </footer>
-    
+<div class="mr-4 text-[#FF7D7D] p-2 text-2xl w-1/2 h-40 border-8 border-green-300 mb-2">
+  <p>Order History:</p>
+  <p>Pepperoni with cheese</p>
+</div>
+
+<div class="p-2 bg-[#F8FFDB] mr-4 text-[#FF7D7D] text-2xl w-1/2 h-40 border-8 border-green-300 mb-2">
+  <p>Your Favorite Pizza:</p>
+  <p>Pepperoni with extra cheese</p>
+</div>
+</div>
+    <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
