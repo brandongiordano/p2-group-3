@@ -1,11 +1,8 @@
 
-<div class="text-center">
-        <h2 class="gap-10 p-4 text-4xl bg-[#F8FFDB] text-[#FF7D7D]">Welcome, name here!</h2>
-    </div>
-    <div class="mb-6 bg-[#F8FFDB] flex justify-center">
+    <div class="mb-4 bg-[#F8FFDB] flex justify-center">
 <div class="ml-4 text-[#FF7D7D] p-2 text-2xl w-1/2 h-40 border-8 border-green-300 mr-5">
-  <p>Address:</p>
-  <p>730 Simms St, Lakewood, CO 80401</p>
+  <p class="text-3xl font-bold">Address:</p>
+  <p class="">{{address}}</p>
 </div>
 <div>
 </div>
@@ -15,22 +12,11 @@
   <p>Pepperoni with cheese</p>
 </div>
 
-<div class="mr-4 text-[#FF7D7D] p-2 text-2xl w-1/2 h-40 border-8 border-green-300 mb-2">
+<div class="p-2 bg-[#F8FFDB] mr-4 text-[#FF7D7D] text-2xl w-1/2 h-40 border-8 border-green-300 mb-2">
   <p>Your Favorite Pizza:</p>
   <p>Pepperoni with extra cheese</p>
 </div>
 </div>
-        <footer class="border-8 border-solid border-green-300  text-2xl flex justify-center p-12 bg-[#F8FFDB] text-[#FF7D7D] ">
-          <ul class="footer inline-grid">
-            <a class="text-[#FF7D7D]" href=""><li><i class="fa-brands fa-instagram"></i>    Instagram </a>
-            </li>
-            <a class="text-[#FF7D7D]" href=""><i class="fa-brands fa-facebook-f"></i>    Facebook</a></li>
-            <li><a class="text-[#FF7D7D]" href=""><i class="fa-brands fa-twitter"></i>    twitter</a>
-            </li>
-            <li><a class="text-[#FF7D7D]" href="mailto:papayon@gmail.com"><i class="fa-regular fa-envelope"></i>    Email Us! Papayon@gmail.com</a>
-            </li>
-          </ul>
-      </footer>
     <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
