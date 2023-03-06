@@ -11,18 +11,16 @@
     <!-- Ingredients -->
 <div class="bg-[#f8ffdb]">
 {{#each pizzas as |pizza|}}
-        <div class="bg-[#F8FFDB] flex justify-center p-4 text-2xl m-4 text-center rounded">
-           <div class="bg-[#F8FFDB] w-2/5 input-group">
-  <div class="bg-[#ff6464] input-group-text">
-    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-  </div>
-  <input value="{{pizza.pizza_name}}         ${{pizza.price}}" type="text" class="bg-green-300 text-3xl form-control" aria-label="Text input with radio button"></input>
-</div>
-        </div>
+<fieldset class="flex justify-center">
+    <div class="m-2 bg-[#F8FFDB]">
+      <input class="" type="radio" id="huey" name="drone" value="huey">
+      <label class="p-3 text-3xl" for="{{pizza.pizza_name}}">{{pizza.pizza_name}}      ${{pizza.price}}</label>
+    </div>
+</fieldset>
         {{/each}}
    </div>   
    <a href="/checkout"> 
-        <div class="bg-[#F8FFDB] text-center text-3xl">
+        <div class="pt-4 bg-[#F8FFDB] text-center text-3xl">
             <button class="text-dark hover:bg-green-800 text-2xl rounded bg-[#FF7D7D] mb-10 p-3">Proceed to Checkout</button>
         </div>
         </a> 

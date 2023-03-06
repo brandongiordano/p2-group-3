@@ -83,10 +83,12 @@ router.get('/building', async (req, res) => {
 // });
 
 //render /checkout (no associations yet)
-router.get('/Checkout', (req, res) => 
+router.get('/checkout', (req, res) => 
 {
 
-  res.render('checkout');
+  res.render('checkout', {
+    logged_in:true
+  });
 });
 
 module.exports = router;
