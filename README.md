@@ -11,7 +11,7 @@ This project is a partially functioning website for an imaginary pizza chain nam
 - [Usage](#usage)
 - [Credits](#credits)
 - [Questions](#questions)
-- [Demo](#demo)
+- [Screenshots](#screenshots)
 
 ## Installation
 
@@ -31,3 +31,8 @@ Brandon Giordano, Kevin Hernandez, and Alexander Brenes-Pimentel
 If you have any questions you can contact us at bgiordano9917@aol.com or via my GitHub: brandongiordano
 
 ## Screenshots
+
+![2023-03-06](https://user-images.githubusercontent.com/110688825/223290932-feea9b9b-2bbe-4c62-80bf-a6c134e79ff0.png)
+![2023-03-06 (2)](https://user-images.githubusercontent.com/110688825/223290962-05087e1d-3eef-4117-9e68-7407730fe10d.png)
+![2023-03-06 (3)](https://user-images.githubusercontent.com/110688825/223290980-2db6cbb0-b77f-4829-ba58-2715afd54454.png)
+
